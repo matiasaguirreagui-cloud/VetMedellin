@@ -1,5 +1,25 @@
-# VetMedellin
+ VetMedellin:
 
+ 
+Es una aplicación integral para la gestión local de clínicas veterinarias. El sistema centraliza la administración de pacientes, registros médicos y control de especialistas, ofreciendo una interfaz rápida y una arquitectura escalable de consumo local.
+
+Arquitectura y Metodología de Desarrollo
+
+Este repositorio fue construido bajo un modelo de desarrollo de software híbrido, integrando diseño de sistemas tradicional con herramientas de generación de código impulsadas por Inteligencia Artificial (IA) para optimizar el ciclo de vida del proyecto:
+
+Ingeniería de Datos (Manual): El modelado conceptual, la normalización del esquema relacional (MySQL/MariaDB) y la lógica base de persistencia de datos se desarrollaron de forma manual. Este enfoque garantizó un control riguroso sobre la integridad referencial y la adaptación exacta a las necesidades de registro clínico de la veterinaria.
+
+Desarrollo Frontend y Configuración (Asistido por IA): La construcción de la interfaz de usuario (Next.js, React, TypeScript) y la orquestación de los entornos de ejecución (scripts de arranque local, gestión de puertos y variables de entorno) fueron generadas e iteradas con el soporte de IA. La integración de estos modelos permitió implementar de manera ágil patrones de diseño modernos, componentes interactivos y configuraciones de despliegue precisas.
+
+Stack Tecnológico
+
+Frontend: Next.js, React, TypeScript
+
+Backend: API REST en PHP (PDO)
+
+Base de Datos: MySQL / MariaDB (XAMPP)
+
+Despliegue Local: Scripts automatizados en PowerShell/Batch
 Aplicación local para la gestión de una clínica veterinaria. El frontend usa Next.js, React y TypeScript; la API usa PHP/PDO; los datos están en MySQL/MariaDB de XAMPP.
 
 ## Arrancar en Windows
