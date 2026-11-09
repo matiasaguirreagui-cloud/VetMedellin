@@ -1,2 +1,3 @@
 <?php
-require_once 'historias.php';
+declare(strict_types=1);
+require __DIR__ . '/historias.php';

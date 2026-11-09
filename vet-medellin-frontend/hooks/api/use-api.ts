@@ -7,21 +7,11 @@ import type {
   DuenoFormData, MascotaFormData, MedicoFormData, CitaFormData,
   ProductoFormData, HistoriaClinicaFormData, ReporteFinanciero, AlertaVacuna
 } from '@/lib/types';
-import { API_BASE_URL } from '@/lib/api';
+import { api, API_BASE_URL } from '@/lib/composition/api';
 
 const BACKEND_URL = API_BASE_URL;
 
-const phpRequest = async <T>(url: string, options?: RequestInit): Promise<T> => {
-  const response = await fetch(url, options);
-  const payload = await response.json().catch(() => null);
-  if (!response.ok) {
-    throw new Error(payload?.message || `Error de API (${response.status})`);
-  }
-  if (payload === null) {
-    throw new Error('El backend devolvió una respuesta vacía o inválida.');
-  }
-  return payload as T;
-};
+const phpRequest = <T>(url: string, options?: RequestInit): Promise<T> => api.request<T>(url, options);
 
 const phpFetcher = <T>(url: string): Promise<T> => phpRequest<T>(url);
 
